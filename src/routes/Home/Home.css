@@ -1,0 +1,42 @@
+/*General*/
+h2{
+    font-size:3rem;
+}
+
+a{
+    color: var(--text-primary);
+}
+
+/*Intro Section*/
+section{
+    display: flex;
+    justify-content: center;
+    padding: 5rem 0 0 0;
+
+}
+
+.home {
+    height: 100%;
+    color: var(--text-primary);
+    background-color: var(--background);
+    font-size: large;
+    font-weight: bold;
+    transition: all .5s;
+    padding: 2rem;
+    border-bottom: 2px var(--accent) solid;
+  }
+
+img#profile-pic{
+    width: 30%;
+    border: 1px solid black;
+    border-radius: 45%;
+    margin-inline-end: 4em;
+    filter: drop-shadow(1px 1px 3px black);
+}
+
+.introduction{
+    width:100%;
+}
+
+
+
