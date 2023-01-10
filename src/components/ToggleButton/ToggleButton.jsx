@@ -13,11 +13,12 @@ const ToggleButton = ({ label, toggled, onClick }) => {
     }
 
     return(
-        <label>
-            <input type="checkbox" defaultChecked={isToggled} onClick={handleToggle} />
-            <span />
-            <strong>{label}</strong>
-        </label>
+        <div className='toggle__button'>
+            <label>
+                <input type="checkbox" defaultChecked={isToggled} onClick={handleToggle} id='toggle__input' />
+                <span id='toggle__span'/>
+            </label>
+        </div>
     )
 
 };

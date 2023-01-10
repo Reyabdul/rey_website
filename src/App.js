@@ -10,8 +10,12 @@ import ToggleButton from './components/ToggleButton/ToggleButton';
 
 //import routes
 import Home from './routes/Home/Home';
+import About from './routes/About/About';
+import Skills from './routes/Skills/Skills';
 import Contact from './routes/Contact/Contact';
-import Work from './routes/Work/Work';
+import Works from './routes/Works/Works';
+import Qualifications from './components/Qualifications/Qualifications';
+import BackToTop from './components/BackToTop/BackToTop';
 
 const App = () => {
 
@@ -28,17 +32,30 @@ const App = () => {
     <div className="main" data-theme={theme}>
       <BrowserRouter>
         <Navigation />
+
         <ToggleButton 
           toggled={false}
           onClick={switchTheme}  
           label={theme === 'light' ? 'Dark Mode' : 'Light Mode'}
         />
+
+{/*
           <Routes>
             <Route path='/' element={<Home />}  />
             <Route path='Contact' element={<Contact />} />
-            <Route path='work' element={<Work />} />
+            <Route path='works' element={<Works />} />
           </Routes>
+*/}
+          <main className='main'>
+            <Home />
+            <About />
+            <Skills />
+            {/*<Qualifications />*/}
+            <Works />
+            <Contact />
+          </main>
         <Footer />
+        <BackToTop />
       </BrowserRouter>
     </div>
   );

@@ -1,0 +1,150 @@
+#about{
+  height: 100%;
+}
+
+.about__container {
+  grid-template-columns: repeat(2, 2fr);
+  align-items: center;
+  column-gap: 4rem;
+}
+
+.about__img {
+  width: 350px;
+  border-radius: 1.5rem;
+  justify-self: center;
+}
+
+.about__info {
+  grid-template-columns: repeat(2, 200px);
+  gap: 0.8rem;
+  margin: 0 0 1rem 0;
+}
+
+.about__box {
+  background-color: var(#191a1b);
+  border: 1px solid var(--text-primary);
+  border-radius: 0.75rem;
+  text-align: center;
+  padding: 1rem 1.25rem;
+}
+
+.about__icon {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin: 0 0 1rem 0;
+}
+
+.about__title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.about__subtitle {
+  font-size: 0.8rem;
+}
+
+.about__description {
+  padding: 0.5rem 0;
+  margin: 0;
+}
+
+p .about__description {
+  padding: 0.5rem 0;
+  margin: 0;
+}
+
+.bx {
+  padding: 0 0 0 .5rem;
+}
+
+#resume__button {
+  margin: 1rem 0;
+}
+
+/*=========== BREAKPOINTS =============*/
+/*Large  Screens and Devices (e.g.:DESKTOPS)*/
+@media screen and (max-width: 992px) {
+  .about__container {
+    grid-template-columns: 1fr;
+    row-gap: 2.5rem;
+  }
+
+  .about__img {
+    width: 220px;
+  }
+
+  .about__box {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .about__data {
+    text-align: center;
+  }
+
+  .about__info {
+    justify-content: center;
+  }
+
+  .about__description {
+    padding: 0 5rem;
+    margin: 0 0 2rem 0;
+  }
+}
+
+/*Medium Screens and Devices (e.g.:TABLETS)*/
+
+@media screen and (max-width: 768px) {}
+.about__img {
+  width: 350px;
+  border-radius: 1.5rem;
+  justify-self: center;
+}
+
+
+/*Small Screens and Devices (e.g.:MOBILE)*/
+@media screen and (max-width: 420px) {
+
+  .about .section__subtitle{
+    margin: 0 0 2rem 0;
+  }
+
+  .about__container {
+    grid-template-columns: 1fr;
+    align-items: center;
+    column-gap: 4rem;
+  }
+
+  .about__info {
+    grid-template-columns: repeat(2, 150px);
+    gap: 0.8rem;
+    margin: 0 0 1rem 0;
+  }
+
+  .about__box {
+    background-color: var(#191a1b);
+    text-align: center;
+    padding: 1rem 1.25rem;
+  }
+
+  .about__icon {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin: 0 0 1rem 0;
+  }
+
+  .about__title {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .about__subtitle {
+    font-size: 0.8rem;
+  }
+
+  .about__description {
+    padding: 0.5rem 0;
+    margin: 0;
+  }
+
+
+}

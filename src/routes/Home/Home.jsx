@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Home.css';
-import profilePic from "../../assets/ReyAbdul_photo.jpg";
-import Work from "../Work/Work";
+import Social from './Social';
+import Intro from './Intro';
+
 
 
 
@@ -11,19 +12,21 @@ const Home = () => {
 
     return(
 
-        <>
-           <section className='home'>
-                <img id="profile-pic" src={profilePic} />
-                <div className='introduction'>
-                    <h2>Hi! I'm rey. A freelance web developer</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, provident expedita. Tenetur, modi voluptatem! Temporibus unde eos iure corrupti quaerat praesentium, reiciendis itaque non? Quo, non? Totam sapiente corporis iste?</p>
+    
+           <section className='home section' id='home'>
+                <div className='home__container container grid'>
+                    <div className='home__content grid'>
+                        <Social />
+                        <div className='home__image'>
+                        </div>
+                        <Intro />
+                    </div>
                 </div>
+                
 
             </section>
 
-            <Work />
-
-        </>
+    
 
     )
 };

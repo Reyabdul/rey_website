@@ -1,18 +1,206 @@
-/*General*/
-.main {
-  height: 100%;
+/* Site Stylesheet
+  1. Global Styles
+  2. Typography Styles
+  3. Variable CSS Styles
+  4. Page Styles
+  5. Media Queries Styles
+
+  Note: Components are styled within their own folder
+
+======================================== */
+
+/* 1. Global Styles
+======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: var(--background-primary);
   color: var(--text-primary);
-  background-color: var(--background);
-  font-size: large;
-  font-weight: bold;
-  transition: all .5s;
-  padding: 2rem;
+  width: 100vw;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+body,
+button,
+input,
+textarea{
+  font-family: "poppins", sans-serif;
+  font-size: 1rem;
+}
+
+ul{
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 button {
   color: var(--text-primary);
-  background-color: var(--background);
-  border: 2px var(--text-primary) solid;
-  float: right;
+  background-color: var(--background-primary);
   transition: all .5s;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+
+/*
+========================================
+  2. Variable CSS Styles
+======================================== */
+:root {
+  --background-primary: #f5f4ef;
+  --background-secondary: #191a1b;
+  --background-accent: #f5f4efef;
+  --container-background: #eeeeeb;
+  --text-primary: #191a1b;
+  --text-secondary: orange;
+  --accent: #191a1b;
+}
+
+[data-theme='dark'] {
+  --background-primary: #191a1b;
+  --background-secondary: #f5f4ef;
+  --background-accent: #191a1bf1;
+  --container-background: #6061625e;
+  --text-primary: #f5f4ef;
+  --text-secondary: grey;
+  --accent: #f5f4ef;
+}
+
+/*
+======================================== 
+  3. Typography Styles
+======================================== */
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+}
+
+h1, h2, h3 {
+  color: var(--background);
+  font-weight: 600;
+}
+
+
+/*
+========================================
+  4. Layout
+======================================== */
+
+.section {
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  padding: 6rem 0 2rem;
+}
+
+.section__title{
+  font-size: 2rem;
+  color: var(--text-primary);
+}
+
+.section__subtitle {
+  display: block;
+  font-size: 1.5rem;
+  margin: 0 0 4rem 0;
+}
+
+.section__title, 
+.section__subtitle {
+  text-align: center;
+}
+
+.container {
+  max-width: 968px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/*=========== BUTTONS =============*/
+
+.button {
+  display: inline-block;
+  background-color: var(--background-secondary);
+  color: var(--background-primary);
+  padding: 1.25rem 2rem;
+  border-radius: 1rem;
+  font-weight: 500;
+}
+
+.button:hover{
+  background-color: var(--text-secondary);
+}
+
+.button__icon {
+  background-color: var(--text-primary);
+}
+
+.button--flex {
+  display: inline-flex;
+  align-items: center;
+}
+
+/*
+========================================
+  5. Media Queries Styles
+======================================== */
+
+/*=========== BREAKPOINTS =============*/
+/*Large  Screens and Devices (e.g.:DESKTOPS)*/
+@media screen and (max-width: 992px) {
+  .container {
+    margin: 0 1rem;
+  }
+
+  .button {
+    padding: 1rem 1.75rem;
+  }
+}
+
+/*Medium Screens and Devices (e.g.:TABLETS)*/
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 2rem 0 2rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+
+}
+/*Small Screens and Devices (e.g.:MOBILE)*/
+@media screen and (max-width: 390px) {
+  :root {
+    --big-font-size: 2.25rem;
+  }
+
+  .section {
+    padding: 0 1rem;
+  }
+  
 }

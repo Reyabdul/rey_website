@@ -1,51 +1,57 @@
-label {
-    position: relative;
+.toggle__button {
+  width: 100%;
+}
+
+
+.toggle__button label {
+    position: fixed;
     display: inline-block;
     width: 60px;
     height: 30px;
-    top: 2rem;
-    left: 95%;
+    top: 4rem;
+    right: 1rem;
+    z-index: 3;
 }
 
-input {
+.toggle__button input {
     opacity: 0;
     width: 0;
     height: 0;
 }
 
-span {
+.toggle__button span {
     position: absolute;
     cursor: pointer;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: navy;
+    background: var(--background-secondary);
     transition: 0.3s;
     border-radius: 30px;
 }
 
-span:before {
+.toggle__button span:before {
     position: absolute;
     content: "";
     height: 25px;
     width: 25px;
     left: 3px;
     bottom: 2.6px;
-    background-color: #fff;
+    background-color: var(--background-primary);
     border-radius: 50%;
     transition: 0.3s;
   }
   
-  input:checked + span {
-    background-color: #00c853;
+  .toggle__button input:checked + span {
+    background-color: (--background-primary);
   }
   
-  input:checked + span:before {
+  .toggle__button input:checked + span:before {
     transform: translateX(29px);
   }
 
-  strong {
+  .toggle__button strong {
     position: absolute;
     left: -190%;
     width: max-content;
@@ -54,3 +60,90 @@ span:before {
     cursor: pointer;
 }
 
+/*=========== BREAKPOINTS =============*/
+/*Large  Screens and Devices (e.g.:DESKTOPS)*/
+@media screen and (max-width: 992px) {
+}
+
+/*Medium Screens and Devices (e.g.:TABLETS)*/
+@media screen and (max-width: 768px) {
+  .toggle__button label {
+    position: fixed;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    top: 3rem;
+    right: 1rem;
+    z-index: 12;
+  }
+}
+
+/*Medium Screens and Devices (e.g.:TABLETS)*/
+@media screen and (max-width: 576px) {
+  
+}
+/*Small Screens and Devices (e.g.:MOBILE)*/
+@media screen and (max-width: 420px) {
+  .toggle__button {
+    width: 100%;
+  }
+  
+  
+  .toggle__button label {
+      position: fixed;
+      display: inline-block;
+      width: 30px;
+      height: 15px;
+      top: 2.5rem;
+      right: 1.5rem;
+      z-index: 3;
+  }
+  
+  .toggle__button input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+  }
+  
+  .toggle__button span {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--background-secondary);
+      transition: 0.3s;
+      border-radius: 15px;
+  }
+  
+  .toggle__button span:before {
+      position: absolute;
+      content: "";
+      height: 13px;
+      width: 13px;
+      left: 2px;
+      bottom: 1px;
+      background-color: var(--background-primary);
+      border-radius: 50%;
+      transition: 0.3s;
+    }
+    
+    .toggle__button input:checked + span {
+      background-color: (--background-primary);
+    }
+    
+    .toggle__button input:checked + span:before {
+      transform: translateX(14px);
+    }
+  
+    .toggle__button strong {
+      position: absolute;
+      left: -190%;
+      width: max-content;
+      line-height: 15px;
+      margin-left: 5px;
+      cursor: pointer;
+  }
+  
+}
