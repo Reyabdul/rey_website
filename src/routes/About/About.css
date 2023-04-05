@@ -1,11 +1,13 @@
 #about{
   height: 100%;
+  padding: 1rem;
 }
 
 .about__container {
   grid-template-columns: repeat(2, 2fr);
   align-items: center;
   column-gap: 4rem;
+
 }
 
 .about__img {
@@ -21,7 +23,7 @@
 }
 
 .about__box {
-  background-color: var(#191a1b);
+  background-color: var(--container-background);
   border: 1px solid var(--text-primary);
   border-radius: 0.75rem;
   text-align: center;

@@ -111,7 +111,7 @@ img#profile-pic{
     border: 1px solid black;
     border-radius:  1.5rem;
     margin-inline-end: 4em;
-    filter: grayscale(100%) brightness(200%) drop-shadow(1px 1px 3px black);
+    filter: sepia(100%) grayscale(60%) brightness(200%) drop-shadow(1px 1px 3px black);
     justify-content: center;
 }
 

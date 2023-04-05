@@ -1,12 +1,12 @@
-.skills.section {
+#skills {
   height: 100%;
-  margin: 2rem auto;
 }
 
 .skills__container {
     grid-template-columns: repeat(2, 350px);
     column-gap:  2rem;
     justify-content: center;
+    margin: 0 auto 5rem auto;
 }
 
 .skills__content {
@@ -81,7 +81,7 @@
   @media screen and (max-width: 420px) {
     
     .skills.section{
-      padding: 7rem 0;
+      padding: 2rem 0;
     }
 
     .skills .section__subtitle{

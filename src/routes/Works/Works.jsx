@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import './Works.css';
 import xylkScreenshot from "../../assets/xylk_screenshot.png";
 import uaScreenshot from "../../assets/ua_screenshot.png";
+import frScreenshot from "../../assets/frner.png";
 
 
 
@@ -16,6 +17,26 @@ const Works = () => {
 
     const workDetails = [
         {
+            "id": 3,
+            "title": "Frnrz Website",
+            "technologies": {
+              "tech1": "React",
+              "tech2": "CSS",
+              "tech3": " ", 
+            },
+            "work summary": "A client webpage for a design studio",
+            "created": "(In Progress)",
+            "description": {
+                "desc1": "Setting up the React Router Dom and routing each page to its corresponding destination.",
+                "desc2": "Build the Gallery page by using CSS to create a masonry-style layout and JavaScript to load pictures in random order.",
+                "desc3": "Assisting with page responsiveness and adjusting media queries.",
+                "desc4": "Communicated with the team lead at all stages of the project to show my progress.",
+            },
+            "image": frScreenshot,
+            "github": "https://github.com/adesignsm/frnrz",
+            "url": "https://www.frnrz.com/"
+        },
+        {
             "id": 2,
             "title": "Urban Apothecary Website",
             "technologies": {
@@ -24,7 +45,7 @@ const Works = () => {
               "tech3": "Responsive Design", 
             },
             "work summary": "Urban Apothecary's e-commerce website that utilizes Wordpress.",
-            "created": "(In Process)",
+            "created": "(In Progress)",
             "description": {
                 "desc1": "Ensured the responsiveness on various device (e.g: desktop, tablet, mobile).",
                 "desc2": "Refactored code for better readability.",
@@ -44,9 +65,9 @@ const Works = () => {
             "created": "Dec 2022",
             "description": {
                 "desc1": "Assisted with the recoding of whole website from Vanilla Javascript to React.js.",
-                "desc2": "Utilized Shopify API to pull product data to populate website.",
-                "desc3": "Integrated Matter.js to give product movement throughout webpage.",
-                "desc4": "Helped improve overall lighthouse score by cleaning up code and utilizing DRY principles,",
+                "desc2": "Utilizing Shopify-Buy API to pull product data from the client’s Shopify account to create a fully customized webpage.",
+                "desc3": "Customizing the website visuals and responsiveness through CSS.",
+                "desc4": "Helped improve overall lighthouse score by cleaning up code and utilizing DRY principles.",
             },
             "image": xylkScreenshot,
             "github": "https://github.com/Reyabdul/xylk_website_final",
@@ -141,7 +162,7 @@ const Works = () => {
                                         data-url={w.github}
                                         onClick={(e) => openGithub(e)}
                                     >
-                                        {w.github? "github" : "no github"}
+                                        {w.github? "github" : "No github"}
                                     </button>
 
                                     <button 

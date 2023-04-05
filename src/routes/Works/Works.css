@@ -1,11 +1,13 @@
 #works {
   height: 100%;
+  padding: 1rem;
 }
 
 .works__container {
   grid-template-columns: repeat(2, 2fr);
   align-items: center;
   column-gap: 4rem;
+  margin:  0 auto 2rem auto ;
 }
 
 .tech__container {
@@ -42,7 +44,7 @@
 
 .desc__list {
   list-style: square;
-  margin: 0 0 0 1.3rem;
+  margin: 0 0 0 1rem;
 }
 
 .link__containers {
@@ -77,18 +79,26 @@
 /*Small Screens and Devices (e.g.:MOBILE)*/
 @media screen and (max-width: 420px) {
   .works .section__subtitle {
-    margin: 0 0 2rem 0;
+    margin: 0;
+  }
+
+  .works__img {
+    width: 350px;
+    border-radius: 1.5rem;
+    justify-self: center;
+    margin: 2rem 0 0 0;
+    padding: 0;
   }
 
   .works__details {
     grid-template-columns: repeat(2, 150px);
     gap: 0.8rem;
-    margin: 0 0 1rem 0;
+    padding: 0 0 1rem 0;
   }
 
   .link__containers {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 1rem;
-    margin: 1rem 0;
+    padding: 1rem 0;
   }
 }

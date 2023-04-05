@@ -7,8 +7,7 @@ const BackToTop = () => {
         const scrollUp = document.querySelector(".scrollup");
         //when scroll is higher than 560 viewport height, scroll button (show-scroll) will show
         if (this.scrollY >= 560) scrollUp.classList.add("show-scroll");
-         else scrollUp.classList.remove("show-scroll");
-        
+      else scrollUp.classList.remove("show-scroll");        
     })
 
     return(
